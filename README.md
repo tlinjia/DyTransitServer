@@ -14,5 +14,12 @@ tips:
 3. 对于多个客户端请求一个房间，服务器只会建立一个与斗鱼服务器的连接，并根据任务列表转发至相应客户端。
 
 ***
-
+# 演示
+## 监听日志
+![server](https://github.com/tlinjia/Pictures/blob/master/TransitServer/%E7%9B%91%E5%90%AC%E8%BF%9E%E6%8E%A5.jpg)
+对于每一条请求：
+* 如果请求的房间号不在任务列表中，新建与斗鱼的连接（所请求房间号）
+* 如果请求的房间号已在任务列表中，将该连接加入列表（所请求房间号）
+* 如果某房间号已没有客户端监听，关闭与斗鱼的连接（所请求房间号）
+***
 [客户端请点击这里](https://github.com/tlinjia/DyTransitClient)
